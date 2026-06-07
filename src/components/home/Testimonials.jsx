@@ -9,21 +9,21 @@ const testimonialsData = [
     initials: 'BH',
     color: 'bg-brand-accent/10 text-brand-accent border border-brand-accent/20',
     isFeatured: true,
-    text: 'I used to pay for Kling, ElevenLabs, Suno, and HeyGen separately — that was <span class="text-brand-accent font-bold">$157 every single month</span> whether I was actively creating or not. I switched to PromptEdit and my first month I spent <span class="text-brand-accent font-bold">$39</span>, got more credits than I needed, AND got access to that insane templates library. <span class="text-brand-accent font-bold">I genuinely cannot believe more creators don\'t know about this.</span> It\'s not even close — this is the smarter way to work with AI tools.'
+    text: 'I used to pay for Kling, ElevenLabs, Suno, and HeyGen separately - that was <span class="text-brand-accent font-bold">$157 every single month</span> whether I was actively creating or not. I switched to PromptEdit and my first month I spent <span class="text-brand-accent font-bold">$39</span>, got more credits than I needed, AND got access to that insane templates library. <span class="text-brand-accent font-bold">I genuinely cannot believe more creators don\'t know about this.</span> It\'s not even close - this is the smarter way to work with AI tools.'
   },
   {
     name: 'Hilda Schlueter',
     role: 'Online Course Creator',
     initials: 'HS',
     color: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
-    text: 'My daughter and I got <span class="text-brand-accent font-bold">3 hours of editing done</span> in a single afternoon that normally would have taken us 3 full days. The templates library alone is worth 10x the price — I\'d honestly pay <span class="text-brand-accent font-bold">$100/month</span> just for the LUTs and sound effects.'
+    text: 'My daughter and I got <span class="text-brand-accent font-bold">3 hours of editing done</span> in a single afternoon that normally would have taken us 3 full days. The templates library alone is worth 10x the price - I\'d honestly pay <span class="text-brand-accent font-bold">$100/month</span> just for the LUTs and sound effects.'
   },
   {
     name: 'Matt Lilley',
     role: 'ContentCreator.com Student - YouTuber',
     initials: 'ML',
     color: 'bg-blue-500/10 text-blue-400 border border-blue-500/20',
-    text: 'My videos <span class="text-brand-accent font-bold">wouldn\'t look half as good</span> as they do without PromptEdit. I lean into the templates on every single edit — the cinematic LUTs, the text animations, the overlays. I\'ve tried every platform out there. Nothing comes close to this value.'
+    text: 'My videos <span class="text-brand-accent font-bold">wouldn\'t look half as good</span> as they do without PromptEdit. I lean into the templates on every single edit - the cinematic LUTs, the text animations, the overlays. I\'ve tried every platform out there. Nothing comes close to this value.'
   },
   {
     name: 'James Kowalski',
@@ -89,9 +89,8 @@ function TestimonialCard({ item, idx }) {
           ? `radial-gradient(350px circle at ${coords.x}px ${coords.y}px, rgba(56, 189, 248, 0.12), transparent 80%)`
           : 'none',
       }}
-      className={`${
-        item.isFeatured ? 'w-[85vw] max-w-[340px] sm:w-[480px] md:w-[600px]' : 'w-[85vw] max-w-[340px] sm:w-[320px] md:w-[355px]'
-      } shrink-0 snap-start flex flex-col justify-between p-5 sm:p-7.5 rounded-2xl md:rounded-3xl bg-brand-card/30 border border-brand-accent/20 shadow-2xl hover:bg-brand-card/45 hover:border-brand-accent/35 transition-all duration-300 h-auto backdrop-blur-xl relative overflow-hidden`}
+      className={`${item.isFeatured ? 'w-[85vw] max-w-[340px] sm:w-[480px] md:w-[600px]' : 'w-[85vw] max-w-[340px] sm:w-[320px] md:w-[355px]'
+        } shrink-0 snap-start flex flex-col justify-between p-5 sm:p-7.5 rounded-2xl md:rounded-3xl bg-brand-card/30 border border-brand-accent/20 shadow-2xl hover:bg-brand-card/45 hover:border-brand-accent/35 transition-all duration-300 h-auto backdrop-blur-xl relative overflow-hidden`}
     >
       <div>
         {/* Top Quote Icon / Pill (Featured) or Stars (Regular) */}
@@ -107,7 +106,7 @@ function TestimonialCard({ item, idx }) {
           </div>
         )}
 
-        <p 
+        <p
           className="text-[11.5px] sm:text-sm text-brand-tint/65 leading-relaxed italic mb-4 sm:mb-6"
           dangerouslySetInnerHTML={{ __html: `"${item.text}"` }}
         />
@@ -153,7 +152,7 @@ export default function Testimonials() {
   useEffect(() => {
     // Check initially on mount
     handleScroll();
-    
+
     // Add resize listener to handle dynamic viewport scaling
     window.addEventListener('resize', handleScroll);
     return () => window.removeEventListener('resize', handleScroll);
@@ -214,11 +213,10 @@ export default function Testimonials() {
             <button
               onClick={scrollLeft}
               disabled={!showLeftArrow}
-              className={`hidden sm:flex w-11 h-11 rounded-full bg-brand-card/30 border border-brand-border/60 text-white items-center justify-center transition-all duration-300 cursor-pointer shadow-md active:scale-95 shrink-0 ${
-                !showLeftArrow 
-                  ? 'opacity-20 cursor-not-allowed hover:border-brand-border/60' 
-                  : 'hover:bg-brand-card hover:border-brand-accent/50 hover:scale-105'
-              }`}
+              className={`hidden sm:flex w-11 h-11 rounded-full bg-brand-card/30 border border-brand-border/60 text-white items-center justify-center transition-all duration-300 cursor-pointer shadow-md active:scale-95 shrink-0 ${!showLeftArrow
+                ? 'opacity-20 cursor-not-allowed hover:border-brand-border/60'
+                : 'hover:bg-brand-card hover:border-brand-accent/50 hover:scale-105'
+                }`}
               title="Previous"
             >
               <ChevronLeft className="w-5 h-5 text-brand-tint" />
@@ -234,16 +232,16 @@ export default function Testimonials() {
                 </div>
                 <span className="text-[9.5px] sm:text-[11px] font-bold text-brand-tint/50">4.9 / 5 average</span>
               </div>
-              
+
               <div className="h-6 sm:h-8 w-px bg-brand-border/60 shrink-0" />
-              
+
               <div className="flex flex-col items-center shrink-0">
                 <span className="text-xs sm:text-sm md:text-base font-black text-white leading-none">43,000+</span>
                 <span className="text-[9.5px] sm:text-[11px] font-bold text-brand-tint/50 mt-1 sm:mt-1.5">active creators</span>
               </div>
-              
+
               <div className="h-6 sm:h-8 w-px bg-brand-border/60 shrink-0" />
-              
+
               <div className="flex flex-col items-center shrink-0">
                 <span className="text-xs sm:text-sm md:text-base font-black text-white leading-none">$118</span>
                 <span className="text-[9.5px] sm:text-[11px] font-bold text-brand-tint/50 mt-1 sm:mt-1.5">avg monthly saving</span>
@@ -254,11 +252,10 @@ export default function Testimonials() {
             <button
               onClick={scrollRight}
               disabled={!showRightArrow}
-              className={`hidden sm:flex w-11 h-11 rounded-full bg-brand-card/30 border border-brand-border/60 text-white items-center justify-center transition-all duration-300 cursor-pointer shadow-md active:scale-95 shrink-0 ${
-                !showRightArrow 
-                  ? 'opacity-20 cursor-not-allowed hover:border-brand-border/60' 
-                  : 'hover:bg-brand-card hover:border-brand-accent/50 hover:scale-105'
-              }`}
+              className={`hidden sm:flex w-11 h-11 rounded-full bg-brand-card/30 border border-brand-border/60 text-white items-center justify-center transition-all duration-300 cursor-pointer shadow-md active:scale-95 shrink-0 ${!showRightArrow
+                ? 'opacity-20 cursor-not-allowed hover:border-brand-border/60'
+                : 'hover:bg-brand-card hover:border-brand-accent/50 hover:scale-105'
+                }`}
               title="Next"
             >
               <ChevronRight className="w-5 h-5 text-brand-tint" />

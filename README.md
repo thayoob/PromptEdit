@@ -19,7 +19,7 @@ Pay only for what you use.
 
 ## Overview
 
-**PromptEdit** is a premium AI creator platform that aggregates the world's best AI models under a single dashboard. Instead of paying multiple monthly subscriptions, users buy credits and use any tool — AI video generation, image creation, audio production, voice synthesis — all from one place.
+**PromptEdit** is a premium AI creator platform that aggregates the world's best AI models under a single dashboard. Instead of paying multiple monthly subscriptions, users buy credits and use any tool - AI video generation, image creation, audio production, voice synthesis - all from one place.
 
 The frontend is a high-performance, dark-themed React SPA featuring:
 - Cinematic preloader with brand animation
@@ -38,7 +38,7 @@ The frontend is a high-performance, dark-themed React SPA featuring:
 | **Styling** | [Tailwind CSS v4](https://tailwindcss.com/) |
 | **Animations** | [Framer Motion 12](https://www.framer.com/motion/) |
 | **Icons** | [Lucide React](https://lucide.dev/) |
-| **Font** | [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) — Google Fonts |
+| **Font** | [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) - Google Fonts |
 | **Deployment** | [Vercel](https://vercel.com/) |
 | **Language** | JavaScript (ESM) |
 | **Package Manager** | npm |
@@ -51,7 +51,7 @@ The frontend is a high-performance, dark-themed React SPA featuring:
 
 Ensure you have the following installed:
 
-- **Node.js** `v18+` — [Download](https://nodejs.org/)
+- **Node.js** `v18+` - [Download](https://nodejs.org/)
 - **npm** `v9+` (comes with Node.js)
 
 ### Installation
@@ -86,7 +86,7 @@ npm run build
 npm run preview
 ```
 
-The build output is in the `dist/` folder — ready to deploy.
+The build output is in the `dist/` folder - ready to deploy.
 
 ### Linting
 
@@ -157,8 +157,8 @@ The app uses CSS custom properties for a consistent brand token system:
 | Token | Value | Usage |
 |---|---|---|
 | `--color-brand-bg` | `#09090f` | Page background |
-| `--color-brand-primary` | `#6366f1` | Indigo — primary CTA |
-| `--color-brand-accent` | `#38bdf8` | Cyan — highlights, glows |
+| `--color-brand-primary` | `#6366f1` | Indigo - primary CTA |
+| `--color-brand-accent` | `#38bdf8` | Cyan - highlights, glows |
 | `--color-brand-surface` | `#12141f` | Card / panel backgrounds |
 | `--color-brand-tint` | `#b8c0d4` | Body text |
 | `--color-brand-border` | `#1e2235` | Borders / dividers |

@@ -29,7 +29,7 @@ export default function FooterCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[400px] bg-brand-accent/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-5xl mx-auto px-6 relative z-10">
-        
+
         {/* Glow-spotlight Outer Card Container */}
         <div
           ref={containerRef}
@@ -49,7 +49,7 @@ export default function FooterCTA() {
 
           {/* Split 2-Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 md:gap-12 items-center relative z-10">
-            
+
             {/* Left Column (Checklist, Title & CTA Action) - Span 3 */}
             <div className="lg:col-span-3 flex flex-col gap-8 text-left">
               <div>
@@ -57,7 +57,7 @@ export default function FooterCTA() {
                   Ready to Create <span className="text-brand-accent">Better Content?</span>
                 </h2>
                 <p className="text-sm sm:text-base text-brand-tint/65 leading-relaxed max-w-xl">
-                  Stop paying for multiple AI subscriptions and start creating faster with everything you need in one place — pay only for what you use.
+                  Stop paying for multiple AI subscriptions and start creating faster with everything you need in one place - pay only for what you use.
                 </p>
               </div>
 
@@ -81,7 +81,7 @@ export default function FooterCTA() {
                   <span>Get Started Free</span>
                   <ArrowRight className="w-4 h-4 text-brand-bg transition-transform group-hover:translate-x-0.5" />
                 </button>
-                
+
                 <span className="text-[10px] font-bold text-brand-tint/30 uppercase tracking-wider pl-1 select-none">
                   No subscriptions required • Pay only for what you use • Cancel anytime
                 </span>
@@ -90,11 +90,11 @@ export default function FooterCTA() {
 
             {/* Right Column (Guarantee Shield Card & Creators Pill) - Span 2 */}
             <div className="lg:col-span-2 flex flex-col gap-6 w-full">
-              
+
               {/* Money Back Guarantee Glass Card */}
               <div className="bg-brand-surface/40 border border-brand-accent/10 p-6 rounded-2xl backdrop-blur-md text-left shadow-lg relative overflow-hidden">
                 <div className="absolute -right-10 -bottom-10 w-24 h-24 bg-amber-500/5 rounded-full blur-2xl pointer-events-none" />
-                
+
                 <div className="flex items-center gap-3 mb-3.5">
                   <div className="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center text-amber-400 shrink-0 border border-amber-500/20">
                     <ShieldCheck className="w-5 h-5" />
@@ -103,7 +103,7 @@ export default function FooterCTA() {
                     30-Day Money-Back Guarantee
                   </h4>
                 </div>
-                
+
                 <p className="text-xs sm:text-sm text-brand-tint/50 leading-relaxed">
                   Try PromptEdit risk-free for 30 days. If you're not completely satisfied, we'll refund your purchase. No complicated forms. No hidden conditions.
                 </p>
@@ -117,7 +117,7 @@ export default function FooterCTA() {
                   <div className="w-8 h-8 rounded-full bg-emerald-500/20 border border-brand-bg text-[10px] font-black text-emerald-400 flex items-center justify-center">HS</div>
                   <div className="w-8 h-8 rounded-full bg-blue-500/20 border border-brand-bg text-[10px] font-black text-blue-400 flex items-center justify-center">ML</div>
                 </div>
-                
+
                 <div className="flex flex-col text-left">
                   <span className="text-xs font-extrabold text-white">
                     Join 43,000+ Creators Today

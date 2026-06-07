@@ -101,10 +101,10 @@ export default function Pricing() {
               {/* Bullet Features */}
               <div className="flex flex-col gap-3 mb-6 md:mb-10">
                 {[
-                  { text: 'All 20+ AI tools — Kling, Veo, Suno, ElevenLabs', ok: true },
-                  { text: 'Credits never expire — use when you want', ok: true },
+                  { text: 'All 20+ AI tools - Kling, Veo, Suno, ElevenLabs', ok: true },
+                  { text: 'Credits never expire - use when you want', ok: true },
                   { text: 'Premiere Pro + DaVinci plugins included', ok: true },
-                  { text: 'Buy more credits anytime — no subscription', ok: true },
+                  { text: 'Buy more credits anytime - no subscription', ok: true },
                   { text: 'Templates library not included', ok: false },
                   { text: 'No monthly credit bonus', ok: false }
                 ].map((item, idx) => (
@@ -139,7 +139,7 @@ export default function Pricing() {
             <div className="text-left">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 bg-brand-accent/20 text-brand-accent rounded-lg border border-brand-accent/20">
-                  Most popular — Best value
+                  Most popular - Best value
                 </span>
               </div>
 
@@ -169,7 +169,7 @@ export default function Pricing() {
                   { text: 'Lifetime 20% boost on all monthly credits', ok: true, highlight: true },
                   { text: 'Faster AI generation speeds', ok: true, highlight: false },
                   { text: 'Run multiple generations at once', ok: true, highlight: false },
-                  { text: 'Cancel anytime — no lock-in', ok: true, highlight: false }
+                  { text: 'Cancel anytime - no lock-in', ok: true, highlight: false }
                 ].map((item, idx) => (
                   <div
                     key={idx}
@@ -186,7 +186,7 @@ export default function Pricing() {
             {/* Button */}
             <button className="w-full relative group px-6 py-3.5 text-white font-extrabold text-xs rounded-2xl tracking-wider uppercase transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] cursor-pointer flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(99,102,241,0.25)] bg-gradient-to-r from-violet-600 via-indigo-600 to-brand-accent hover:shadow-[0_8px_25px_rgba(99,102,241,0.4)]">
               <span>
-                Get started — ${monthlyPrice}/mo
+                Get started - ${monthlyPrice}/mo
               </span>
               <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
             </button>
