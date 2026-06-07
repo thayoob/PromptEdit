@@ -231,7 +231,7 @@ export default function HeroMockup({ itemVariants, onWatchDemo }) {
       className="lg:col-span-6 w-full flex items-center justify-center select-none py-4 sm:py-0"
     >
       <div className="w-full max-w-[600px] sm:max-w-[640px] aspect-[640/390] sm:aspect-[640/490] flex items-center justify-center relative">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-[480px] scale-[0.44] min-[340px]:scale-[0.50] min-[400px]:scale-[0.58] min-[480px]:scale-[0.70] sm:scale-[0.92] lg:scale-100 origin-center shrink-0">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-[480px] scale-[0.44] min-[340px]:scale-[0.50] min-[400px]:scale-[0.58] min-[480px]:scale-[0.70] sm:scale-[0.80] lg:scale-[0.82] origin-center shrink-0">
       {/* Dynamic gradients & glow style rules */}
       <style>{`
         @keyframes sunset-pan {

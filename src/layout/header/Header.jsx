@@ -22,13 +22,40 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileSection, setExpandedMobileSection] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const timeoutRef = useRef(null);
 
-  // Scroll detection — header gains bg after 80px
+  // Hide on scroll down, show on scroll up
   useEffect(() => {
-    // Reset scroll on fresh load
     window.scrollTo(0, 0);
-    const onScroll = () => setScrolled(window.scrollY > 80);
+
+    const onScroll = () => {
+      const currentY = window.scrollY;
+      const diff = currentY - lastScrollY.current;
+
+      // Always show at very top
+      if (currentY < 80) {
+        setVisible(true);
+        setScrolled(false);
+      } else {
+        setScrolled(true);
+        // Scrolling down more than 8px → hide
+        if (diff > 8) {
+          setVisible(false);
+          // Also close any open menus
+          setActiveDropdown(null);
+          setIsMobileMenuOpen(false);
+        }
+        // Scrolling up more than 4px → show
+        else if (diff < -4) {
+          setVisible(true);
+        }
+      }
+
+      lastScrollY.current = currentY;
+    };
+
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
@@ -69,7 +96,8 @@ export default function Header() {
           DESKTOP HEADER: Sleek Horizontal Capsule
           ────────────────────────────────────────────────────────── */}
       <div 
-        className="hidden md:block fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-5xl"
+        className="hidden md:block fixed top-5 left-1/2 z-50 w-[92%] max-w-5xl"
+        style={{ transform: `translateX(-50%) translateY(${visible ? '0' : '-140%'})`, transition: 'transform 0.3s ease-in-out' }}
         onMouseLeave={handleMouseLeave}
       >
         <header
@@ -181,7 +209,10 @@ export default function Header() {
       {/* ──────────────────────────────────────────────────────────
           MOBILE HEADER: Compact Pill + Hamburger Menu
           ────────────────────────────────────────────────────────── */}
-      <div className="block md:hidden fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[92%] select-none">
+      <div
+        className="block md:hidden fixed top-5 left-1/2 z-50 w-[92%] select-none"
+        style={{ transform: `translateX(-50%) translateY(${visible ? '0' : '-140%'})`, transition: 'transform 0.3s ease-in-out' }}
+      >
         <header
           className="w-full rounded-full px-5 py-3 flex items-center justify-between relative transition-all duration-500"
           style={{
